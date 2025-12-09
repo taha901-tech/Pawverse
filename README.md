@@ -1,2 +1,0 @@
-# Pawverse
-Pawverse landing page
