@@ -307,17 +307,17 @@ body > footer {
   padding: 1.5rem 1.3rem 1.3rem;
   border: 1px solid rgba(148, 163, 184, 0.6);
   box-shadow: 0 12px 26px rgba(148, 163, 184, 0.4);
-  opacity: 0;
-  transform: translateY(12px);
-  animation: cardUp 0.65s ease-out forwards;
+  /* start visible */
+  opacity: 1;
+  transform: translateY(0);
+  /* gentle continuous float + slight hover */
+  animation: cardFloat 5s ease-in-out infinite alternate;
+  transition: transform 0.16s ease-out, box-shadow 0.16s ease-out;
 }
 
-.feature-card:nth-child(2) {
-  animation-delay: 0.15s;
-}
-
-.feature-card:nth-child(3) {
-  animation-delay: 0.3s;
+.feature-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 16px 32px rgba(148, 163, 184, 0.6);
 }
 
 .feature-card h3 {
