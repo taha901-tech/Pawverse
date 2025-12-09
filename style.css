@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f8fafc;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* HEADER/HERO */
+.hero {
+  background: linear-gradient(135deg, #ff8a50, #6c63ff);
+  color: #ffffff;
+  padding-bottom: 4rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 8vw;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.nav-cta {
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.hero-content {
+  padding: 3rem 8vw;
+  max-width: 700px;
+}
+
+.hero-title {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  max-width: 480px;
+  opacity: 0.9;
+}
+
+.primary-btn {
+  display: inline-block;
+  margin-top: 1.4rem;
+  padding: 0.8rem 1.4rem;
+  background: white;
+  color: #1a1a1a;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+.section {
+  padding: 3.5rem 8vw;
+  text-align: center;
+}
+
+.section-text {
+  max-width: 650px;
+  margin: 0.5rem auto;
+  color: #4b5563;
+}
+
+/* FEATURES */
+.features {
+  background: white;
+}
+
+.feature-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 1.4rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+/* WAITLIST */
+.waitlist {
+  background: #fef3e7;
+  border-top: 1px solid #fed7aa;
+  border-bottom: 1px solid #fed7aa;
+}
+
+.waitlist-form {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.waitlist-form input {
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  min-width: 240px;
+}
+
+.waitlist-form button {
+  padding: 0.8rem 1.4rem;
+  background: #ff8a50;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tiny-text {
+  font-size: 0.8rem;
+  margin-top: 0.6rem;
+  color: #475569;
+}
+
+/* FOOTER */
+.footer {
+  padding: 2rem 8vw;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
