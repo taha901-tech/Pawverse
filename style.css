@@ -56,8 +56,8 @@ body > footer {
   position: absolute;
   left: -2px;
   right: -2px;
-  bottom: -26px;
-  height: 52px;
+  bottom: -60px;
+  height: 70px;
   background: radial-gradient(circle at 50% 0, #ffffff 70%, transparent 71%);
 }
 
