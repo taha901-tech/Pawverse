@@ -51,15 +51,6 @@ body > footer {
 }
 
 /* wavy divider under hero */
-.hero::after {
-  content: "";
-  position: absolute;
-  left: -2px;
-  right: -2px;
-  bottom: -60px;
-  height: 70px;
-  background: radial-gradient(circle at 50% 0, #ffffff 70%, transparent 71%);
-}
 
 /* top nav */
 .nav {
@@ -221,20 +212,7 @@ body > footer {
 }
 
 /* small “mascot bubble” behind Milo card */
-.hero-illus::before {
-  content: "🐶";
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 999px;
-  background: radial-gradient(circle at 30% 20%, #fee2e2, #fed7aa);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  opacity: 0.9;
-  transform: translate(-70px, -50px);
-}
+
 
 .pet-avatar {
   width: 40px;
