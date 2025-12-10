@@ -296,46 +296,59 @@ body > footer {
 
 /* ========== FEATURES SECTION ========== */
 
-.features {
-  text-align: left;
-}
-
-.features h2 {
-  text-align: center;
-}
-
-/* grid for three cards */
-.feature-grid {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.6rem;
-}
-
-@media (min-width: 880px) {
-  .feature-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-/* animated feature cards */
+/* animated, colourful feature cards */
 .feature-card {
-  background: #f9fafb;
+  position: relative;
+  background: #ffffff;
   border-radius: 22px;
-  padding: 1.5rem 1.3rem 1.3rem;
-  border: 1px solid rgba(148, 163, 184, 0.6);
-  box-shadow: 0 12px 26px rgba(148, 163, 184, 0.4);
+  padding: 1.6rem 1.4rem 1.4rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 14px 30px rgba(148, 163, 184, 0.45);
 
-  /* visible & animated */
+  /* visible & gently animated */
   opacity: 1;
   transform: translateY(0);
-  animation: cardFloat 5s ease-in-out infinite alternate;
+  animation: cardFloat 6s ease-in-out infinite alternate;
   transition: transform 0.16s ease-out, box-shadow 0.16s ease-out;
+  overflow: hidden;
+
+  /* default fallback colour, overridden below per card */
+  --card-start: #fb7185;
+}
+
+/* soft gradient glow inside each card */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at top left, var(--card-start), transparent 55%);
+  opacity: 0.28;
+  z-index: 0;
+}
+
+/* make actual content sit above the glow */
+.feature-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* different colour per card */
+.feature-card:nth-child(1) {
+  --card-start: #fb7185; /* pink / coral */
+}
+
+.feature-card:nth-child(2) {
+  --card-start: #a855f7; /* purple */
+}
+
+.feature-card:nth-child(3) {
+  --card-start: #38bdf8; /* blue */
 }
 
 .feature-card:hover {
   transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 16px 32px rgba(148, 163, 184, 0.6);
+  box-shadow: 0 18px 34px rgba(148, 163, 184, 0.6);
 }
 
 .feature-card h3 {
@@ -356,6 +369,7 @@ body > footer {
   color: #111827;
 }
 
+/* cute coloured bullets instead of plain dots */
 .feature-card li {
   position: relative;
   padding-left: 1.1rem;
@@ -363,11 +377,14 @@ body > footer {
 }
 
 .feature-card li::before {
-  content: "•";
+  content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  color: #fb7185;
+  top: 0.45em;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--card-start);
 }
 
 /* ========== WAITLIST ========== */
